@@ -11,4 +11,5 @@ def caesar_cipher(string, key)
       alphabet[(alphabet.index(char.downcase) + key) % 26]
     end
   end
+  string_arr.join
 end
