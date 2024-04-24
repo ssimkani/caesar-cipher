@@ -1,5 +1,5 @@
 def caesar_cipher(string, key)
-  alphabet = [*"a".."z", *"a".."z"]
+  alphabet = [*"a".."z"]
   string_arr = string.split("")
 
   string_arr.map! do |char|
@@ -13,3 +13,5 @@ def caesar_cipher(string, key)
   end
   string_arr.join
 end
+
+p caesar_cipher("What a string!", -13)
