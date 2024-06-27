@@ -5,10 +5,10 @@ def caesar_cipher(string, key)
   # @param key [Integer] The amount to shift each letter by
   # @return [String] The encrypted string
 
-  alphabet = [*"a".."z"]
+  alphabet = [*'a'..'z']
 
   # turning string into array
-  string_arr = string.split("")
+  string_arr = string.split('')
 
   # map method for encryption
   string_arr.map! do |char|
@@ -21,6 +21,6 @@ def caesar_cipher(string, key)
     end
   end
 
-  #return encrypted string
+  # return encrypted string
   string_arr.join
 end
