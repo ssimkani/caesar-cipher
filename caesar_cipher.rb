@@ -1,26 +1,31 @@
-def caesar_cipher(string, key)
-  # Encrypts the given string using the Caesar Cipher
-  #
-  # @param string [String] The string to encrypt
-  # @param key [Integer] The amount to shift each letter by
-  # @return [String] The encrypted string
+# frozen_string_literal: true
 
-  alphabet = [*'a'..'z']
+# Class for the caesar_cipher encryption method
+class CaesarCipher
+  def caesar_cipher(string, key)
+    # Encrypts the given string using the Caesar Cipher
+    #
+    # @param string [String] The string to encrypt
+    # @param key [Integer] The amount to shift each letter by
+    # @return [String] The encrypted string
 
-  # turning string into array
-  string_arr = string.split('')
+    alphabet = [*'a'..'z']
 
-  # map method for encryption
-  string_arr.map! do |char|
-    if !alphabet.include?(char.downcase)
-      char
-    elsif char == char.upcase
-      alphabet[(alphabet.index(char.downcase) + key) % 26].upcase
-    else
-      alphabet[(alphabet.index(char.downcase) + key) % 26]
+    # turning string into array
+    string_arr = string.split('')
+
+    # map method for encryption
+    string_arr.map! do |char|
+      if !alphabet.include?(char.downcase)
+        char
+      elsif char == char.upcase
+        alphabet[(alphabet.index(char.downcase) + key) % 26].upcase
+      else
+        alphabet[(alphabet.index(char.downcase) + key) % 26]
+      end
     end
-  end
 
-  # return encrypted string
-  string_arr.join
+    # return encrypted string
+    string_arr.join
+  end
 end
