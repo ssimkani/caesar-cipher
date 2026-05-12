@@ -1,10 +1,6 @@
-def caesar_cipher(string, key)
-  # Encrypts the given string using the Caesar Cipher
-  #
-  # @param string [String] The string to encrypt
-  # @param key [Integer] The amount to shift each letter by
-  # @return [String] The encrypted string
+# frozen_string_literal: true
 
+def caesar_cipher(string, key)
   alphabet = [*"a".."z"]
 
   # turning string into array
@@ -21,6 +17,6 @@ def caesar_cipher(string, key)
     end
   end
 
-  #return encrypted string
+  # return encrypted string
   string_arr.join
 end
